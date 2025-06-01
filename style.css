@@ -1,0 +1,243 @@
+/* === Variáveis de Tema === */
+:root {
+  --bg-color: #4A90E2;
+  --text-color: #333;
+  --header-bg: #22222271;
+  --header-text: #fff;
+  --card-bg: #fff;
+  --card-border: #ddd;
+  --button-bg: #2d89ef;
+  --button-hover: #1b5a7;
+  --footer-bg: var(--header-bg);
+}
+
+[data-theme="dark"] {
+  --bg-color: #1e1e1e;
+  --text-color: #f0f0f0;
+  --header-bg: #121212;
+  --header-text: #ffffff;
+  --card-bg: #2a2a2a;
+  --card-border: #444;
+  --button-bg: #4a90e2; /* contraste melhorado */
+  --button-hover: #1664c0;
+  --footer-bg: var(--header-bg);
+}
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Estrutura === */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--button-bg);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.theme-toggle:focus {
+  outline: 2px solid var(--button-bg);
+  outline-offset: 2px;
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+main section {
+  margin-bottom: 2rem; /* novo espaçamento */
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* === Cards mais compactos === */
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.produto {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 0.7rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s, background-color 0.3s;
+  font-size: 0.9rem;
+}
+
+.produto:hover {
+  transform: translateY(-4px);
+}
+
+.produto img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+button,
+.btn-download {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+.btn-download:hover {
+  background-color: var(--button-hover);
+}
+
+button.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+button.loading::after {
+  content: " ...";
+}
+
+.carrinho,
+.ebook-gratuito,
+.formas-pagamento {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.descricao,
+.description {
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+/* === Formulário de adicionar produto === */
+#form-adicionar-produto {
+  margin-top: 2rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#form-adicionar-produto h2 {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+#form-adicionar-produto label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+#form-adicionar-produto input[type="text"],
+#form-adicionar-produto input[type="number"],
+#form-adicionar-produto input[type="url"],
+#form-adicionar-produto textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+#form-adicionar-produto input[type="text"]:focus,
+#form-adicionar-produto input[type="number"]:focus,
+#form-adicionar-produto input[type="url"]:focus,
+#form-adicionar-produto textarea:focus {
+  outline: none;
+  border-color: var(--button-bg);
+  box-shadow: 0 0 0 3px rgba(77, 144, 254, 0.4); /* realce acessível */
+}
+
+#form-adicionar-produto button {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#form-adicionar-produto button:hover {
+  background-color: var(--button-hover);
+}
+
