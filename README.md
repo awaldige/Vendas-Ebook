@@ -160,7 +160,7 @@ Este projeto está licenciado sob a Licença MIT.
 
 👨‍💻 Desenvolvido por
 Seu Nome
-🔗 awaldige.github.io • 📧 Email awaldige@gmail.com
+🔗[ awaldige.github.io ](https://awaldige.github.io/)• 📧 Email awaldige@gmail.com
 
 💬 Contribuições
 Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias!
