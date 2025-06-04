@@ -139,6 +139,24 @@ main {
 #itens-carrinho li {
   padding: 0.5rem 0;
   border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#itens-carrinho li button {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+#itens-carrinho li button:hover {
+  background-color: #990000;
 }
 
 #total {
@@ -239,4 +257,5 @@ footer {
     padding: 0.4rem;
   }
 }
+
 
