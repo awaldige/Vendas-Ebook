@@ -2,8 +2,9 @@
 function alternarTema() {
   const html = document.documentElement;
   const temaAtual = html.getAttribute("data-theme");
-  html.setAttribute("data-theme", temaAtual === "light" ? "dark" : "light");
-  document.querySelector(".theme-toggle").textContent = temaAtual === "light" ? "☀️" : "🌙";
+  const novoTema = temaAtual === "light" ? "dark" : "light";
+  html.setAttribute("data-theme", novoTema);
+  document.querySelector(".theme-toggle").textContent = novoTema === "light" ? "🌙" : "☀️";
 }
 
 // Variáveis de controle
@@ -15,7 +16,6 @@ const formasPagamento = document.getElementById("formasPagamento");
 
 // Adiciona item ao carrinho, prevenindo duplicatas
 function adicionarAoCarrinho(nome, preco) {
-  // Se já existir no carrinho, avisa e não adiciona
   if (carrinho.some(item => item.nome === nome)) {
     alert(`${nome} já está no carrinho.`);
     return;
@@ -41,12 +41,11 @@ function atualizarCarrinho() {
 
   carrinho.forEach((item) => {
     const li = document.createElement("li");
-    li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)} `;
+    li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
 
     // Botão remover
     const btnRemover = document.createElement("button");
     btnRemover.textContent = "Remover";
-    btnRemover.style.marginLeft = "10px";
     btnRemover.onclick = () => removerDoCarrinho(item.nome);
 
     li.appendChild(btnRemover);
@@ -67,27 +66,35 @@ function finalizarCompra() {
 document.getElementById("formPagamento").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  alert("Pagamento confirmado! Os links de download foram liberados.");
+  alert("Pagamento confirmado! Você pode baixar seus eBooks.");
 
-  carrinho.forEach(item => {
-    const produto = document.querySelector(`.produto[data-nome="${item.nome}"]`);
-    const botaoDownload = produto.querySelector(".download-btn");
-    if (botaoDownload) {
-      botaoDownload.classList.remove("hidden");
-    }
-  });
+  formasPagamento.classList.add("hidden");
+
+  liberarDownloads();
 
   carrinho = [];
   atualizarCarrinho();
-  formasPagamento.classList.add("hidden");
 });
 
-// Força o download do PDF (sem abrir em nova aba)
-function forcarDownload(event, arquivo) {
+// Libera os botões de download dos eBooks comprados
+function liberarDownloads() {
+  carrinho.forEach(item => {
+    const produtoDiv = [...document.querySelectorAll(".produto")].find(div => div.dataset.nome === item.nome);
+    if (produtoDiv) {
+      const botaoDownload = produtoDiv.querySelector(".download-btn");
+      if (botaoDownload) {
+        botaoDownload.classList.remove("hidden");
+      }
+    }
+  });
+}
+
+// Força o download do PDF ao clicar no link de download
+function forcarDownload(event, url) {
   event.preventDefault();
   const link = document.createElement("a");
-  link.href = arquivo;
-  link.download = arquivo.split("/").pop(); // Extrai apenas o nome do arquivo
+  link.href = url;
+  link.download = url.split("/").pop();
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
