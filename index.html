@@ -1,76 +1,132 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loja de eBooks</title>
+  <title>Loja de eBooks AW</title>
+  <meta name="description" content="Loja online de eBooks AW com diversos títulos sobre desenvolvimento web, bancos de dados e programação." />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <h1>📚 Loja de eBooks</h1>
-    <button class="theme-toggle" onclick="alternarTema()">🌙</button>
-  </header>
+    <h1>Loja de eBooks AW</h1>
+    <button 
+      class="theme-toggle" 
+      onclick="alternarTema()" 
+      aria-label="Alternar tema claro e escuro"
+      title="Alternar tema claro e escuro"
+    >🌙</button>
+  </header> 
 
   <main>
     <section class="produtos">
-      <div class="produto" data-nome="HTML Essencial">
-        <h3>HTML Essencial</h3>
-        <p>Domine as bases do HTML com este guia simples e eficaz.</p>
-        <button onclick="adicionarAoCarrinho('HTML Essencial', 12.90)">Adicionar ao carrinho</button>
-        <a href="ebooks/HTML_Essencial.pdf" class="download-btn hidden" onclick="forcarDownload(event, 'ebooks/HTML_Essencial.pdf')">📥 Baixar eBook</a>
-      </div>
+      <h2>eBooks disponíveis</h2>
+      <div class="grid-produtos" id="lista-produtos" role="list">
 
-      <div class="produto" data-nome="CSS Notes">
-        <h3>CSS Notes</h3>
-        <p>Aprenda os fundamentos de CSS com este guia prático.</p>
-        <button onclick="adicionarAoCarrinho('CSS Notes', 14.90)">Adicionar ao carrinho</button>
-        <a href="ebooks/CSS_Notes.pdf" class="download-btn hidden" onclick="forcarDownload(event, 'ebooks/CSS_Notes.pdf')">📥 Baixar eBook</a>
-      </div>
+        <!-- Produtos fixos -->
+        <div class="produto" data-nome="CSS Notes" data-aos="fade-up" role="listitem">
+          <img src="CSS.jpg" alt="Capa do livro CSS Notes" class="capa-ebook" />
+          <p>CSS Notes - R$ 24,90</p>
+          <p class="descricao">Domine a linguagem de estilos com exemplos práticos.</p>
+          <button 
+            onclick="adicionarAoCarrinho('CSS Notes', 24.90)" 
+            aria-label="Adicionar CSS Notes ao carrinho"
+          >Adicionar</button>
+          <a href="ebooksCSS_Notes.pdf" class="download-btn hidden" download>Baixar CSS Notes</a>
+        </div>
 
-      <div class="produto" data-nome="JavaScript Essencial">
-        <h3>JavaScript Essencial</h3>
-        <p>Conceitos modernos de JS para iniciantes e intermediários.</p>
-        <button onclick="adicionarAoCarrinho('JavaScript Essencial', 19.90)">Adicionar ao carrinho</button>
-        <a href="ebooks/JavaScript_Essencial.pdf" class="download-btn hidden" onclick="forcarDownload(event, 'ebooks/JavaScript_Essencial.pdf')">📥 Baixar eBook</a>
-      </div>
+        <div class="produto" data-nome="HTML5 Notes" data-aos="fade-up" role="listitem">
+          <img src="HTML5.jpg" alt="Capa do livro HTML5 Notes" class="capa-ebook" />
+          <p>HTML5 Notes - R$ 29,90</p>
+          <p class="descricao">Tudo sobre HTML5 para criar páginas modernas.</p>
+          <button 
+            onclick="adicionarAoCarrinho('HTML5 Notes', 29.90)" 
+            aria-label="Adicionar HTML5 Notes ao carrinho"
+          >Adicionar</button>
+          <a href="ebooksHTML5_Notes.pdf" class="download-btn hidden" download>Baixar HTML5 Notes</a>
+        </div>
 
-      <div class="produto" data-nome="Git e GitHub">
-        <h3>Git e GitHub</h3>
-        <p>Versionamento de código na prática com Git e GitHub.</p>
-        <button onclick="adicionarAoCarrinho('Git e GitHub', 16.90)">Adicionar ao carrinho</button>
-        <a href="ebooks/Git_e_GitHub.pdf" class="download-btn hidden" onclick="forcarDownload(event, 'ebooks/Git_e_GitHub.pdf')">📥 Baixar eBook</a>
+        <div class="produto" data-nome="MySQL Notes" data-aos="fade-up" role="listitem">
+          <img src="MySQL.jpg" alt="Capa do livro MySQL Notes" class="capa-ebook" />
+          <p>MySQL Notes - R$ 39,90</p>
+          <p class="descricao">Aprenda a gerenciar bancos de dados com eficiência.</p>
+          <button 
+            onclick="adicionarAoCarrinho('MySQL Notes', 39.90)" 
+            aria-label="Adicionar MySQL Notes ao carrinho"
+          >Adicionar</button>
+          <a href="ebooksMySQL_Notes.pdf" class="download-btn hidden" download>Baixar MySQL Notes</a>
+        </div>
+
       </div>
     </section>
 
-    <aside class="carrinho">
-      <h2>🛒 Carrinho</h2>
-      <ul id="itens-carrinho"></ul>
-      <p id="total">Total: R$ 0.00</p>
-      <button id="finalizar" onclick="finalizarCompra()" disabled>Finalizar Compra</button>
+    <section class="carrinho">
+      <h2>Carrinho</h2>
+      <ul id="itens-carrinho" role="list" aria-live="polite" aria-label="Itens do carrinho"></ul>
+      <p id="total">Total: R$ 0,00</p>
+      <button id="finalizar" onclick="finalizarCompra()" disabled aria-disabled="true" aria-label="Finalizar compra">Finalizar Compra</button>
+    </section>
 
-      <section id="formasPagamento" class="hidden">
-        <h3>Forma de Pagamento</h3>
-        <form id="formPagamento">
-          <label><input type="radio" name="pagamento" value="pix" /> Pix</label>
-          <label><input type="radio" name="pagamento" value="boleto" /> Boleto</label>
-          <label><input type="radio" name="pagamento" value="cartao" /> Cartão de Crédito</label>
-          <button type="submit">Confirmar Pagamento</button>
-        </form>
-      </section>
-    </aside>
+    <section id="formasPagamento" class="formas-pagamento hidden" aria-hidden="true">
+      <h3>Escolha a forma de pagamento:</h3>
+
+      <form id="formPagamento" aria-label="Formulário de pagamento">
+        <fieldset>
+          <legend>Formas de Pagamento</legend>
+          <label>
+            <input type="radio" name="pagamento" value="pix" required />
+            Pix
+          </label><br>
+          <label>
+            <input type="radio" name="pagamento" value="debito" required />
+            Cartão de Débito
+          </label><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Cartão de Crédito</legend>
+          <label>
+            <input type="radio" name="pagamento" value="cartao_avista" required />
+            À vista
+          </label><br>
+          <label>
+            <input type="radio" name="pagamento" value="cartao_2x" required />
+            2x (sem juros)
+          </label><br>
+          <label>
+            <input type="radio" name="pagamento" value="cartao_3x" required />
+            3x (sem juros)
+          </label><br>
+        </fieldset>
+
+        <button type="submit">Confirmar Pagamento</button>
+      </form>
+    </section>
+
+   <section class="ebook-gratuito">
+  <h2>E-book Gratuito</h2>
+  <div class="ebook-card">
+    <img src="html primeiros passos.png" alt="Capa do eBook gratuito Os Primeiros Passos no HTML" class="capa-ebook-gratuito" />
+    <h3>Os Primeiros Passos no HTML</h3>
+    <p class="description">Aprenda os fundamentos da linguagem de marcação mais importante da web.</p>
+    <a href="HTML pimeiros passos.pdf" download class="btn-download" aria-label="Baixar e-book gratuito Os Primeiros Passos no HTML">Baixar E-book em PDF</a>
+  </div>
+</section>
+
   </main>
 
   <footer>
-    <p>&copy; 2025 Loja de eBooks. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Loja de eBooks AW</p>
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
-
-
-
 
 
 
