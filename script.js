@@ -13,20 +13,43 @@ const totalCarrinho = document.getElementById("total");
 const btnFinalizar = document.getElementById("finalizar");
 const formasPagamento = document.getElementById("formasPagamento");
 
-// Adiciona item ao carrinho
+// Adiciona item ao carrinho, prevenindo duplicatas
 function adicionarAoCarrinho(nome, preco) {
+  // Se já existir no carrinho, avisa e não adiciona
+  if (carrinho.some(item => item.nome === nome)) {
+    alert(`${nome} já está no carrinho.`);
+    return;
+  }
+
   carrinho.push({ nome, preco });
   atualizarCarrinho();
 }
 
-// Atualiza o carrinho na interface
+// Remove item do carrinho pelo nome
+function removerDoCarrinho(nome) {
+  const index = carrinho.findIndex(item => item.nome === nome);
+  if (index !== -1) {
+    carrinho.splice(index, 1);
+    atualizarCarrinho();
+  }
+}
+
+// Atualiza o carrinho na interface, incluindo botões de remover
 function atualizarCarrinho() {
   listaCarrinho.innerHTML = "";
   let total = 0;
 
-  carrinho.forEach((item, index) => {
+  carrinho.forEach((item) => {
     const li = document.createElement("li");
-    li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+    li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)} `;
+
+    // Botão remover
+    const btnRemover = document.createElement("button");
+    btnRemover.textContent = "Remover";
+    btnRemover.style.marginLeft = "10px";
+    btnRemover.onclick = () => removerDoCarrinho(item.nome);
+
+    li.appendChild(btnRemover);
     listaCarrinho.appendChild(li);
     total += item.preco;
   });
@@ -69,4 +92,3 @@ function forcarDownload(event, arquivo) {
   link.click();
   document.body.removeChild(link);
 }
-
