@@ -43,9 +43,10 @@ function atualizarCarrinho() {
     const li = document.createElement("li");
     li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
 
-    // Botão remover
+    // Botão remover no carrinho
     const btnRemover = document.createElement("button");
     btnRemover.textContent = "Remover";
+    btnRemover.style.marginLeft = "10px";
     btnRemover.onclick = () => removerDoCarrinho(item.nome);
 
     li.appendChild(btnRemover);
@@ -70,15 +71,15 @@ document.getElementById("formPagamento").addEventListener("submit", function (e)
 
   formasPagamento.classList.add("hidden");
 
-  liberarDownloads();
+  liberarDownloads(carrinho);
 
   carrinho = [];
   atualizarCarrinho();
 });
 
 // Libera os botões de download dos eBooks comprados
-function liberarDownloads() {
-  carrinho.forEach(item => {
+function liberarDownloads(itensComprados) {
+  itensComprados.forEach(item => {
     const produtoDiv = [...document.querySelectorAll(".produto")].find(div => div.dataset.nome === item.nome);
     if (produtoDiv) {
       const botaoDownload = produtoDiv.querySelector(".download-btn");
@@ -89,13 +90,22 @@ function liberarDownloads() {
   });
 }
 
-// Força o download do PDF ao clicar no link de download
+// Força o download do PDF ao clicar no link de download, com suporte para mobile
 function forcarDownload(event, url) {
   event.preventDefault();
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = url.split("/").pop();
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+
+  // Usando fetch + blob para funcionar também no mobile
+  fetch(url)
+    .then(response => response.blob())
+    .then(blob => {
+      const urlBlob = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = urlBlob;
+      link.download = url.split("/").pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(urlBlob);
+    })
+    .catch(() => alert("Erro ao tentar baixar o arquivo."));
 }
