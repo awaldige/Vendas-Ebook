@@ -14,7 +14,7 @@ body {
 }
 
 :root {
-  --bg: #a0b8e6; /* azul mais escuro que antes */
+  --bg: #a0b8e6;
   --text: #222222;
   --card: #ffffff;
   --accent: #0066cc;
@@ -56,12 +56,17 @@ main {
 
 .produtos {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1.5rem;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
 }
 
 .produto {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
   background-color: var(--card);
   border-radius: 12px;
   padding: 1rem;
@@ -235,7 +240,7 @@ footer {
 /* Responsivo: Reduzir tamanho dos cards no mobile */
 @media (max-width: 600px) {
   .produto {
-    width: 90%;
+    width: 220px;
     padding: 0.8rem;
   }
 
