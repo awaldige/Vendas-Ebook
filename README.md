@@ -1,173 +1,123 @@
-# 📚 Loja de eBooks AW
+📚 Loja de eBooks AW
 
-Uma loja virtual de eBooks desenvolvida com **HTML**, **CSS** e **JavaScript**, oferecendo uma experiência interativa para comprar e baixar livros digitais sobre programação e tecnologia.
+Uma loja virtual de eBooks desenvolvida com HTML, CSS e JavaScript, oferecendo uma experiência interativa para compra e download de livros digitais voltados para programação e tecnologia.
 
-![Screenshot da Loja de eBooks AW](./imagens/screenshot.png)
+O projeto foi criado como parte do portfólio, demonstrando práticas modernas de interface, experiência do usuário e manipulação de dados no navegador.
 
-## 🔥 Recursos do Projeto
+🔥 Recursos do Projeto
 
-- 💡 Tema Claro/Escuro com botão toggle
-- 🛒 Carrinho de compras com atualização de total
-- 💳 Simulação de formas de pagamento (Pix, Débito, Crédito)
-- 📥 Controle de download de eBooks após pagamento
-- 📚 E-book gratuito disponível
-- ⚙️ Animações com AOS (Animate On Scroll)
-- ✅ Acessibilidade e estrutura semântica
+💡 Alternância entre tema claro e escuro
 
----
+🛒 Carrinho de compras com cálculo automático de total
 
-## 🚀 Tecnologias Utilizadas
+💳 Simulação de pagamento (Pix, Débito e Crédito)
 
-- HTML5
-- CSS3 (Flexbox, Responsivo)
-- JavaScript Puro (Vanilla JS)
-- AOS.js para animações ao rolar
-- Ícones, ARIA e boas práticas de UX
+📥 Liberação de download após confirmação de compra
 
----
+📚 Disponibilização de eBook gratuito
 
-## 📁 Estrutura de Arquivos
+⚙️ Animações com AOS (Animate On Scroll)
 
-📦 loja-ebooks-aw/
+✅ Estrutura semântica e boas práticas de acessibilidade
+
+📱 Layout responsivo para desktop e mobile
+
+🚀 Tecnologias Utilizadas
+
+HTML5
+
+CSS3 (Flexbox e responsividade)
+
+JavaScript Puro (Vanilla JS)
+
+AOS.js para animações ao rolar a página
+
+Boas práticas de UX e acessibilidade
+
+📁 Estrutura do Projeto
+loja-ebooks-aw/
+│
 ├── index.html
 ├── style.css
 ├── script.js
-├── /ebooks
-│ ├── ebooksCSS_Notes.pdf
-│ ├── ebooksHTML5_Notes.pdf
-│ └── ebooksMySQL_Notes.pdf
-├── /imagens
-│ ├── CSS.jpg
-│ ├── HTML5.jpg
-│ ├── MySQL.jpg
-│ ├── screenshot.png
-│ └── favicon.ico (opcional)
+│
+├── ebooks/
+│   ├── ebooksCSS_Notes.pdf
+│   ├── ebooksHTML5_Notes.pdf
+│   └── ebooksMySQL_Notes.pdf
+│
+├── imagens/
+│   ├── CSS.jpg
+│   ├── HTML5.jpg
+│   ├── MySQL.jpg
+│   ├── screenshot.png
+│   └── favicon.ico
+│
+└── README.md
 
-yaml
-Copiar
-Editar
+🌐 Acesse o Projeto Online
 
----
+🔗https://vendas-ebook.vercel.app/
 
-## 📸 Demonstração
+📸 Demonstração
 
-Veja abaixo a aparência do projeto:
+![IMG_1309](https://github.com/user-attachments/assets/02179800-6902-452d-87c5-36fd40122b0e)
+![IMG_1311](https://github.com/user-attachments/assets/62adbe17-bbb7-43c1-bcd2-caaaaf12ae25)
+![IMG_1312](https://github.com/user-attachments/assets/45e8acd8-3723-4cd8-a5c5-fed8da800a71)
+![IMG_1313](https://github.com/user-attachments/assets/0ab029d4-77d1-4829-b729-ed6e36f80373)
+![IMG_1314](https://github.com/user-attachments/assets/efa7b4b3-42de-4981-852d-024e9e685be0)
+![IMG_1315](https://github.com/user-attachments/assets/4499cf89-038e-42fa-9db7-2560b33d7ece)
+![IMG_1316](https://github.com/user-attachments/assets/21b1c4d0-0039-4693-8abb-d05e6947288b)
+![IMG_1317](https://github.com/user-attachments/assets/8895804e-9fe3-4a8e-abe8-b8abf3376212)
 
-![Loja AW Screenshot](./imagens/screenshot.png)
+📘 E-book Gratuito
 
----
+O projeto disponibiliza gratuitamente o eBook:
 
-## 📘 E-book Gratuito
+📖 Os Primeiros Passos no HTML
 
-💡 O projeto oferece um eBook gratuito:  
-**"Os Primeiros Passos no HTML"**  
-✔️ Download direto em PDF após clique no botão.
+Disponível para download direto em PDF dentro da aplicação.
 
----
+▶️ Como Usar
 
-## 📦 Como Usar
+Clone o repositório:
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/awaldige/loja-ebooks-aw.git
-Abra o index.html no navegador.
+git clone https://github.com/awaldige/loja-ebooks-aw.git
 
-Aproveite, simule compras e baixe os eBooks.
 
-🛡️ Licença
-Este projeto está licenciado sob a Licença MIT.
+Abra o arquivo index.html no navegador.
 
-👨‍💻 Desenvolvido por
-Seu Nome
-🔗 # 📚 Loja de eBooks AW
+Navegue pelo catálogo, simule compras e baixe os eBooks.
 
-Uma loja virtual de eBooks desenvolvida com **HTML**, **CSS** e **JavaScript**, oferecendo uma experiência interativa para comprar e baixar livros digitais sobre programação e tecnologia.
+Não é necessário backend ou servidor.
 
-![Screenshot da Loja de eBooks AW](./imagens/screenshot.png)
+🔮 Melhorias Futuras
 
-## 🔥 Recursos do Projeto
+Integração com gateway de pagamento real
 
-- 💡 Tema Claro/Escuro com botão toggle
-- 🛒 Carrinho de compras com atualização de total
-- 💳 Simulação de formas de pagamento (Pix, Débito, Crédito)
-- 📥 Controle de download de eBooks após pagamento
-- 📚 E-book gratuito disponível
-- ⚙️ Animações com AOS (Animate On Scroll)
-- ✅ Acessibilidade e estrutura semântica
+Área administrativa para cadastro de livros
 
----
+Sistema de login de usuários
 
-## 🚀 Tecnologias Utilizadas
+Backend para controle de pedidos
 
-- HTML5
-- CSS3 (Flexbox, Responsivo)
-- JavaScript Puro (Vanilla JS)
-- AOS.js para animações ao rolar
-- Ícones, ARIA e boas práticas de UX
-
----
-
-## 📁 Estrutura de Arquivos
-
-📦 loja-ebooks-aw/
-├── index.html
-├── style.css
-├── script.js
-├── /ebooks
-│ ├── ebooksCSS_Notes.pdf
-│ ├── ebooksHTML5_Notes.pdf
-│ └── ebooksMySQL_Notes.pdf
-├── /imagens
-│ ├── CSS.jpg
-│ ├── HTML5.jpg
-│ ├── MySQL.jpg
-│ ├── screenshot.png
-│ └── favicon.ico (opcional)
-
-yaml
-Copiar
-Editar
-
----
-
-## 📸 Demonstração
-
-Veja abaixo a aparência do projeto:
-
-![Loja AW Screenshot](./imagens/screenshot.png)
-
----
-
-## 📘 E-book Gratuito
-
-💡 O projeto oferece um eBook gratuito:  
-**"Os Primeiros Passos no HTML"**  
-✔️ Download direto em PDF após clique no botão.
-
----
-
-## 📦 Como Usar
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/loja-ebooks-aw.git
-Abra o index.html no navegador.
-
-Aproveite, simule compras e baixe os eBooks.
+Versão PWA para uso offline
 
 🛡️ Licença
+
 Este projeto está licenciado sob a Licença MIT.
 
-👨‍💻 Desenvolvido por
-Seu Nome
-🔗[ awaldige.github.io ](https://awaldige.github.io/)• 📧 Email awaldige@gmail.com
+👨‍💻 Autor
+
+Desenvolvido por André Waldige
+
+🔗 GitHub: https://github.com/awaldige
+
+🌐 Portfólio: 
+
+📧 Email: awaldige@gmail.com
 
 💬 Contribuições
-Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias!
 
-Projeto criado como parte do portfólio pessoal para fins de aprendizado e demonstração.• 📧 Email
-
-💬 Contribuições
-Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias!
-
-Projeto criado como parte do portfólio pessoal para fins de aprendizado e demonstração.
+Contribuições são bem-vindas!
+Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias.
