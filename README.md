@@ -1,123 +1,156 @@
-📚 Loja de eBooks AW
+# 📚 Loja de eBooks AW
 
-Uma loja virtual de eBooks desenvolvida com HTML, CSS e JavaScript, oferecendo uma experiência interativa para compra e download de livros digitais voltados para programação e tecnologia.
+### Conhecimento em tecnologia, acessível em poucos cliques.
 
-O projeto foi criado como parte do portfólio, demonstrando práticas modernas de interface, experiência do usuário e manipulação de dados no navegador.
+A **Loja de eBooks AW** é uma aplicação web desenvolvida para apresentar e disponibilizar livros digitais voltados para programação e tecnologia. O projeto oferece um catálogo interativo, carrinho de compras, simulação de pagamento e acesso a downloads de eBooks.
 
-🔥 Recursos do Projeto
+Desenvolvida com HTML5, CSS3 e JavaScript puro, a aplicação demonstra conceitos de desenvolvimento front-end, experiência do usuário, manipulação dinâmica de conteúdo e armazenamento de dados no navegador.
 
-💡 Alternância entre tema claro e escuro
+🌐 **Demonstração online:** [Acessar a Loja de eBooks AW](https://vendas-ebook.vercel.app/)
 
-🛒 Carrinho de compras com cálculo automático de total
+---
 
-💳 Simulação de pagamento (Pix, Débito e Crédito)
+## ✨ Funcionalidades
 
-📥 Liberação de download após confirmação de compra
+- 📚 **Catálogo digital:** apresentação de eBooks sobre HTML5, CSS e MySQL.
+- 🛒 **Carrinho de compras:** seleção de produtos e cálculo automático do total.
+- 💳 **Checkout simulado:** demonstração de fluxo de compra com opções de Pix, débito e crédito.
+- 📥 **Download de eBooks:** disponibilização dos arquivos digitais conforme o fluxo implementado na aplicação.
+- 🎁 **eBook gratuito:** acesso ao material *Os Primeiros Passos no HTML*.
+- 🌗 **Tema claro e escuro:** alternância entre opções de aparência.
+- ✨ **Animações:** efeitos visuais com AOS (Animate On Scroll).
+- 📱 **Layout responsivo:** adaptação da interface a diferentes tamanhos de tela.
+- ♿ **Acessibilidade:** utilização de recursos semânticos e práticas para melhorar a navegação.
 
-📚 Disponibilização de eBook gratuito
+> **Importante:** o checkout é demonstrativo e não representa processamento real de pagamentos. Não informe dados bancários reais na aplicação.
 
-⚙️ Animações com AOS (Animate On Scroll)
+## 🛠️ Tecnologias utilizadas
 
-✅ Estrutura semântica e boas práticas de acessibilidade
+| Tecnologia | Finalidade |
+|---|---|
+| HTML5 | Estrutura semântica da aplicação |
+| CSS3 | Estilização, layout e responsividade |
+| JavaScript (Vanilla JS) | Interatividade e lógica do catálogo e carrinho |
+| AOS.js | Animações durante a rolagem da página |
 
-📱 Layout responsivo para desktop e mobile
+## 📁 Estrutura do projeto
 
-🚀 Tecnologias Utilizadas
-
-HTML5
-
-CSS3 (Flexbox e responsividade)
-
-JavaScript Puro (Vanilla JS)
-
-AOS.js para animações ao rolar a página
-
-Boas práticas de UX e acessibilidade
-
-📁 Estrutura do Projeto
-loja-ebooks-aw/
-│
+```text
+Vendas-Ebook/
 ├── index.html
 ├── style.css
 ├── script.js
-│
 ├── ebooks/
 │   ├── ebooksCSS_Notes.pdf
 │   ├── ebooksHTML5_Notes.pdf
 │   └── ebooksMySQL_Notes.pdf
-│
 ├── imagens/
 │   ├── CSS.jpg
 │   ├── HTML5.jpg
 │   ├── MySQL.jpg
 │   ├── screenshot.png
 │   └── favicon.ico
-│
 └── README.md
+```
 
-🌐 Acesse o Projeto Online
+*Estrutura ilustrativa baseada na organização documentada do projeto. Confira os nomes dos arquivos e diretórios no repositório antes de utilizá-la como referência definitiva.*
 
-🔗https://vendas-ebook.vercel.app/
+## 🌐 Acesse o projeto
 
-📸 Demonstração
+Experimente a aplicação diretamente pelo navegador:
 
-![IMG_1309](https://github.com/user-attachments/assets/02179800-6902-452d-87c5-36fd40122b0e)
-![IMG_1311](https://github.com/user-attachments/assets/62adbe17-bbb7-43c1-bcd2-caaaaf12ae25)
-![IMG_1312](https://github.com/user-attachments/assets/45e8acd8-3723-4cd8-a5c5-fed8da800a71)
-![IMG_1313](https://github.com/user-attachments/assets/0ab029d4-77d1-4829-b729-ed6e36f80373)
-![IMG_1314](https://github.com/user-attachments/assets/efa7b4b3-42de-4981-852d-024e9e685be0)
-![IMG_1315](https://github.com/user-attachments/assets/4499cf89-038e-42fa-9db7-2560b33d7ece)
-![IMG_1316](https://github.com/user-attachments/assets/21b1c4d0-0039-4693-8abb-d05e6947288b)
-![IMG_1317](https://github.com/user-attachments/assets/8895804e-9fe3-4a8e-abe8-b8abf3376212)
+🔗 **[vendas-ebook.vercel.app](https://vendas-ebook.vercel.app/)**
 
-📘 E-book Gratuito
+## 📸 Demonstração
 
-O projeto disponibiliza gratuitamente o eBook:
+Confira algumas capturas de tela da aplicação.
 
-📖 Os Primeiros Passos no HTML
+![Loja de eBooks AW — tela 1](https://github.com/user-attachments/assets/02179800-6902-452d-87c5-36fd40122b0e)
 
-Disponível para download direto em PDF dentro da aplicação.
+![Loja de eBooks AW — tela 2](https://github.com/user-attachments/assets/62adbe17-bbb7-43c1-bcd2-caaaaf12ae25)
 
-▶️ Como Usar
+![Loja de eBooks AW — tela 3](https://github.com/user-attachments/assets/45e8acd8-3723-4cd8-a5c5-fed8da800a71)
 
-Clone o repositório:
+![Loja de eBooks AW — tela 4](https://github.com/user-attachments/assets/0ab029d4-77d1-4829-b729-ed6e36f80373)
 
-git clone https://github.com/awaldige/loja-ebooks-aw.git
+![Loja de eBooks AW — tela 5](https://github.com/user-attachments/assets/efa7b4b3-42de-4981-852d-024e9e685be0)
 
+![Loja de eBooks AW — tela 6](https://github.com/user-attachments/assets/4499cf89-038e-42fa-9db7-2560b33d7ece)
 
-Abra o arquivo index.html no navegador.
+![Loja de eBooks AW — tela 7](https://github.com/user-attachments/assets/21b1c4d0-0039-4693-8abb-d05e6947288b)
 
-Navegue pelo catálogo, simule compras e baixe os eBooks.
+![Loja de eBooks AW — tela 8](https://github.com/user-attachments/assets/8895804e-9fe3-4a8e-abe8-b8abf3376212)
 
-Não é necessário backend ou servidor.
+## 🎁 eBook gratuito
 
-🔮 Melhorias Futuras
+A aplicação disponibiliza gratuitamente o material:
 
-Integração com gateway de pagamento real
+📖 **Os Primeiros Passos no HTML**
 
-Área administrativa para cadastro de livros
+O eBook pode ser acessado e baixado em PDF pela aplicação, conforme os recursos disponíveis na versão publicada.
 
-Sistema de login de usuários
+## 🚀 Como executar localmente
 
-Backend para controle de pedidos
+### Pré-requisitos
 
-Versão PWA para uso offline
+- Git instalado.
+- Navegador atualizado.
+- Visual Studio Code (opcional).
 
-🛡️ Licença
+### 1. Clone o repositório
 
-Este projeto está licenciado sob a Licença MIT.
+```bash
+git clone https://github.com/awaldige/Vendas-Ebook.git
+```
 
-👨‍💻 Autor
+### 2. Entre na pasta do projeto
 
-Desenvolvido por André Waldige
+```bash
+cd Vendas-Ebook
+```
 
-🔗 GitHub: https://github.com/awaldige
+### 3. Abra a aplicação
 
-🌐 Portfólio: 
+Abra o arquivo `index.html` no navegador ou utilize a extensão Live Server no Visual Studio Code.
 
-📧 Email: awaldige@gmail.com
+Não é necessário instalar dependências de backend para executar a aplicação como site estático, desde que todos os recursos externos e caminhos dos arquivos estejam configurados corretamente.
 
-💬 Contribuições
+## 🎯 Objetivos do projeto
 
-Contribuições são bem-vindas!
-Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias.
+- Praticar desenvolvimento front-end com tecnologias nativas da web.
+- Construir um catálogo digital interativo.
+- Implementar a lógica de um carrinho de compras.
+- Trabalhar com eventos e manipulação do DOM.
+- Desenvolver interfaces responsivas e acessíveis.
+- Demonstrar conhecimentos de JavaScript em um projeto prático.
+
+## 🔮 Melhorias futuras
+
+- Integração com um gateway de pagamento real.
+- Painel administrativo para cadastro e gerenciamento de eBooks.
+- Sistema de autenticação de usuários.
+- Backend para gerenciamento de pedidos e compras.
+- Aplicação PWA com suporte a recursos offline.
+
+*Os itens desta seção representam possibilidades de evolução, não funcionalidades necessariamente disponíveis na versão atual.*
+
+## 🛡️ Licença
+
+O projeto declara utilizar a licença MIT. Consulte o arquivo `LICENSE` do repositório para verificar os termos oficiais de utilização, distribuição e modificação.
+
+## 👨‍💻 Autor
+
+**André Waldige — AW TECHNOLOGY**
+
+- **GitHub:** [@awaldige](https://github.com/awaldige)
+- **Portfólio:** [andre-waldige.vercel.app](https://andre-waldige.vercel.app)
+- **E-mail:** awaldige@gmail.com
+
+## 💬 Contribuições
+
+Sugestões e melhorias são bem-vindas. Caso queira contribuir, abra uma *issue* para discutir uma ideia ou envie um *pull request* com sua proposta de alteração.
+
+---
+
+⭐ Se você gostou do projeto, considere deixar uma estrela no repositório!
+
