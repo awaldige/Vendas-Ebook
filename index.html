@@ -1,92 +1,365 @@
+﻿
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loja de eBooks</title>
-  
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='80'%3E📖%3C/text%3E%3C/svg%3E">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="AW EBOOKS â€” eBooks prÃ¡ticos para aprender programaÃ§Ã£o, desenvolvimento web, CSS, HTML5, MySQL e Git.">
+
+  <meta name="theme-color" content="#07152e">
+
+  <title>AW EBOOKS | Conhecimento que transforma</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='80'%3EðŸ“˜%3C/text%3E%3C/svg%3E">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <h1>Loja de eBooks</h1>
-    <button class="theme-toggle" onclick="alternarTema()">🌙</button>
+
+  <!-- CABEÃ‡ALHO -->
+  <header class="site-header">
+    <div class="header-container">
+
+      <a href="#" class="logo">
+        <span class="logo-icon">AW</span>
+        <span>AW <strong>EBOOKS</strong></span>
+      </a>
+
+      <nav class="main-nav" aria-label="NavegaÃ§Ã£o principal">
+        <a href="#inicio">InÃ­cio</a>
+        <a href="#catalogo">eBooks</a>
+        <a href="#beneficios">BenefÃ­cios</a>
+        <a href="#carrinho">Carrinho</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          onclick="alternarTema()"
+          aria-label="Alternar tema"
+          title="Alternar tema"
+        >
+          ðŸŒ™
+        </button>
+
+        <a href="#carrinho" class="cart-link">
+          ðŸ›’ <span>Meu carrinho</span>
+        </a>
+      </div>
+
+    </div>
   </header>
 
   <main>
-    <section class="produtos">
-      <div class="produto" data-nome="HTML5 Notes">
-        <img src="HTML5.jpg" alt="HTML5 Notes">
-        <h3>HTML5 Notes</h3>
-        <p class="descricao">Aprenda os fundamentos do HTML5 com exemplos práticos e modernos.</p>
-        <p>R$ 35,90</p>
-        <div class="botoes-produto">
-          <button onclick="adicionarAoCarrinho('HTML5 Notes', 19.90)">Adicionar ao Carrinho</button>          
-        </div>
-        <a href="ebooksHTML5_Notes.pdf" class="download-btn hidden" onclick="forcarDownload(event, 'ebooksHTML5_Notes.pdf')">Baixar</a>
-      </div>
 
-      <div class="produto" data-nome="CSS Notes">
-        <img src="CSS.jpg" alt="CSS Notes">
-        <h3>CSS Notes</h3>
-        <p class="descricao">Estilize suas páginas com CSS moderno, incluindo Flexbox e Grid.</p>
-        <p>R$ 40,00</p>
-        <div class="botoes-produto">
-          <button onclick="adicionarAoCarrinho('CSS Notes', 19.90)">Adicionar ao Carrinho</button>          
-        </div>
-        <a href="ebooksCSS_Notes.pdf" class="download-btn hidden" onclick="forcarDownload(event, 'ebooksCSS_Notes.pdf')">Baixar</a>
-      </div>
+    <!-- DESTAQUE PRINCIPAL -->
+    <section class="hero" id="inicio">
+      <div class="hero-container">
 
-      <div class="produto" data-nome="MySQL Notes">
-        <img src="MySQL.jpg" alt="MySQL Notes">
-        <h3>MySQL Notes</h3>
-        <p class="descricao">Domine consultas SQL, criação de bancos e boas práticas com MySQL.</p>
-        <p>R$ 27,90</p>
-        <div class="botoes-produto">
-          <button onclick="adicionarAoCarrinho('MySQL Notes', 19.90)">Adicionar ao Carrinho</button>          
-        </div>
-        <a href="ebooksMySQL_Notes.pdf" class="download-btn hidden" onclick="forcarDownload(event, 'ebooksMySQL_Notes.pdf')">Baixar</a>
-      </div>
+        <div class="hero-content">
+          <span class="hero-tag">ðŸ“š CONHECIMENTO DIGITAL</span>
 
-      <div class="produto" data-nome="Git Notes">
-        <img src="Git.png" alt="Git Notes">
-        <h3>Git Notes (Gratuito)</h3>
-        <p class="descricao">Entenda os principais comandos Git e como versionar projetos com eficiência.</p>
-        <p>Grátis</p>
-        <a href="ebooksGit_Notes.pdf" class="download-btn" onclick="forcarDownload(event, 'ebooksGit_Notes.pdf')">Baixar Gratuito</a>
+          <h1>
+            Aprenda hoje.
+            <span>Evolua sempre.</span>
+          </h1>
+
+          <p>
+            eBooks prÃ¡ticos e objetivos para desenvolver suas habilidades
+            em tecnologia, programaÃ§Ã£o e desenvolvimento web.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#catalogo" class="btn-primary">
+              Explorar eBooks â†’
+            </a>
+
+            <a href="#beneficios" class="btn-secondary">
+              ConheÃ§a a loja
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <span>âœ“ ConteÃºdo digital</span>
+            <span>âœ“ Acesso prÃ¡tico</span>
+            <span>âœ“ Aprenda no seu ritmo</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-book">
+            <span>AW</span>
+            <strong>KNOWLEDGE</strong>
+            <small>SEU PRÃ“XIMO NÃVEL COMEÃ‡A AQUI</small>
+            <div class="book-decoration">ðŸ“˜</div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section class="carrinho">
-      <h2>Seu Carrinho</h2>
-      <ul id="itens-carrinho"></ul>
-      <p id="total">Total: R$ 0,00</p>
-      <button id="finalizar" onclick="finalizarCompra()" disabled>Finalizar Compra</button>
+    <!-- BENEFÃCIOS -->
+    <section class="benefits" id="beneficios">
+      <div class="benefit">
+        <span class="benefit-icon">ðŸ’»</span>
+        <div>
+          <h3>Aprendizado prÃ¡tico</h3>
+          <p>ConteÃºdo direto ao ponto.</p>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <span class="benefit-icon">ðŸ“¥</span>
+        <div>
+          <h3>Formato digital</h3>
+          <p>Materiais em PDF.</p>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <span class="benefit-icon">ðŸš€</span>
+        <div>
+          <h3>Desenvolva habilidades</h3>
+          <p>Evolua no seu ritmo.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="formasPagamento" class="hidden">
-      <h2>Escolha a Forma de Pagamento</h2>
+    <!-- CATÃLOGO -->
+    <section class="catalog-section" id="catalogo">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-tag">NOSSO CATÃLOGO</span>
+          <h2>Explore nossos eBooks</h2>
+          <p>Escolha seu prÃ³ximo conteÃºdo e amplie seus conhecimentos.</p>
+        </div>
+      </div>
+
+      <div class="produtos">
+
+        <!-- HTML5 -->
+        <article class="produto" data-nome="HTML5 Notes">
+          <div class="product-image">
+            <img src="HTML5.jpg" alt="Capa do eBook HTML5 Notes">
+            <span class="product-category">Desenvolvimento Web</span>
+          </div>
+
+          <div class="product-info">
+            <span class="product-level">TECNOLOGIA</span>
+            <h3>HTML5 Notes</h3>
+
+            <p class="descricao">
+              Aprenda os fundamentos do HTML5 com exemplos prÃ¡ticos e modernos.
+            </p>
+
+            <div class="product-price">
+              <strong>R$ 35,90</strong>
+            </div>
+
+            <button onclick="adicionarAoCarrinho('HTML5 Notes', 35.90)">
+              Adicionar ao carrinho
+            </button>
+
+            <a href="ebooksHTML5_Notes.pdf"
+               class="download-btn hidden"
+               onclick="forcarDownload(event, 'ebooksHTML5_Notes.pdf')">
+              ðŸ“¥ Baixar eBook
+            </a>
+          </div>
+        </article>
+
+        <!-- CSS -->
+        <article class="produto" data-nome="CSS Notes">
+          <div class="product-image">
+            <img src="CSS.jpg" alt="Capa do eBook CSS Notes">
+            <span class="product-category">Design Web</span>
+          </div>
+
+          <div class="product-info">
+            <span class="product-level">TECNOLOGIA</span>
+            <h3>CSS Notes</h3>
+
+            <p class="descricao">
+              Estilize suas pÃ¡ginas com CSS moderno, incluindo Flexbox e Grid.
+            </p>
+
+            <div class="product-price">
+              <strong>R$ 40,00</strong>
+            </div>
+
+            <button onclick="adicionarAoCarrinho('CSS Notes', 40.00)">
+              Adicionar ao carrinho
+            </button>
+
+            <a href="ebooksCSS_Notes.pdf"
+               class="download-btn hidden"
+               onclick="forcarDownload(event, 'ebooksCSS_Notes.pdf')">
+              ðŸ“¥ Baixar eBook
+            </a>
+          </div>
+        </article>
+
+        <!-- MYSQL -->
+        <article class="produto" data-nome="MySQL Notes">
+          <div class="product-image">
+            <img src="MySQL.jpg" alt="Capa do eBook MySQL Notes">
+            <span class="product-category">Banco de Dados</span>
+          </div>
+
+          <div class="product-info">
+            <span class="product-level">TECNOLOGIA</span>
+            <h3>MySQL Notes</h3>
+
+            <p class="descricao">
+              Domine consultas SQL, criaÃ§Ã£o de bancos e boas prÃ¡ticas com MySQL.
+            </p>
+
+            <div class="product-price">
+              <strong>R$ 27,90</strong>
+            </div>
+
+            <button onclick="adicionarAoCarrinho('MySQL Notes', 27.90)">
+              Adicionar ao carrinho
+            </button>
+
+            <a href="ebooksMySQL_Notes.pdf"
+               class="download-btn hidden"
+               onclick="forcarDownload(event, 'ebooksMySQL_Notes.pdf')">
+              ðŸ“¥ Baixar eBook
+            </a>
+          </div>
+        </article>
+
+        <!-- GIT -->
+        <article class="produto" data-nome="Git Notes">
+          <div class="product-image">
+            <img src="Git.png" alt="Capa do eBook Git Notes">
+            <span class="product-category free-label">GRATUITO</span>
+          </div>
+
+          <div class="product-info">
+            <span class="product-level">DESENVOLVIMENTO</span>
+            <h3>Git Notes</h3>
+
+            <p class="descricao">
+              Entenda os principais comandos Git e como versionar projetos com eficiÃªncia.
+            </p>
+
+            <div class="product-price">
+              <strong class="free-price">GrÃ¡tis</strong>
+            </div>
+
+            <a href="ebooksGit_Notes.pdf"
+               class="download-btn free-download"
+               onclick="forcarDownload(event, 'ebooksGit_Notes.pdf')">
+              ðŸ“¥ Baixar gratuitamente
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CARRINHO -->
+    <section class="cart-section" id="carrinho">
+      <div class="carrinho">
+
+        <div class="cart-heading">
+          <span>ðŸ›’</span>
+          <div>
+            <h2>Seu carrinho</h2>
+            <p>Confira os eBooks selecionados.</p>
+          </div>
+        </div>
+
+        <ul id="itens-carrinho"></ul>
+
+        <div class="cart-total">
+          <p id="total">Total: R$ 0,00</p>
+
+          <button id="finalizar"
+                  onclick="finalizarCompra()"
+                  disabled>
+            Continuar compra â†’
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PAGAMENTO DEMONSTRATIVO -->
+    <section id="formasPagamento" class="payment-section hidden">
+
+      <h2>Forma de pagamento</h2>
+
+      <p>Selecione uma opÃ§Ã£o para continuar com a demonstraÃ§Ã£o.</p>
+
       <form id="formPagamento">
-        <label><input type="radio" name="pagamento" value="pix"> PIX</label>
-        <label><input type="radio" name="pagamento" value="debito"> Cartão de Débito</label>
+
+        <label>
+          <input type="radio" name="pagamento" value="pix" required>
+          PIX
+        </label>
+
+        <label>
+          <input type="radio" name="pagamento" value="debito">
+          CartÃ£o de dÃ©bito
+        </label>
 
         <fieldset>
-          <legend>Cartão de Crédito</legend>
-          <label><input type="radio" name="pagamento" value="credito_avista"> À Vista</label><br>
-          <label><input type="radio" name="pagamento" value="credito_2x"> 2x Sem Juros</label><br>
-          <label><input type="radio" name="pagamento" value="credito_3x"> 3x Sem Juros</label>
+          <legend>CartÃ£o de crÃ©dito</legend>
+
+          <label>
+            <input type="radio" name="pagamento" value="credito_avista">
+            Ã€ vista
+          </label>
+
+          <label>
+            <input type="radio" name="pagamento" value="credito_2x">
+            2x sem juros
+          </label>
+
+          <label>
+            <input type="radio" name="pagamento" value="credito_3x">
+            3x sem juros
+          </label>
         </fieldset>
 
-        <button type="submit">Confirmar Pagamento</button>
+        <p class="payment-notice">
+          Esta loja utiliza checkout demonstrativo. Nenhum pagamento real Ã© processado.
+        </p>
+
+        <button type="submit">Confirmar demonstraÃ§Ã£o</button>
+
       </form>
     </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Loja de eBooks</p> </footer>
+  <!-- RODAPÃ‰ -->
+  <footer class="site-footer">
+    <div class="footer-content">
+
+      <a href="#inicio" class="logo footer-logo">
+        <span class="logo-icon">AW</span>
+        <span>AW <strong>EBOOKS</strong></span>
+      </a>
+
+      <p>Conhecimento que transforma. Tecnologia que conecta.</p>
+
+      <span class="copyright">
+        Â© 2026 AW EBOOKS â€” Todos os direitos reservados.
+      </span>
+
+      <small>Desenvolvido por AW TECHNOLOGY</small>
+
+    </div>
+  </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
