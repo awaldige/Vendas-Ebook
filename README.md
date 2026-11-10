@@ -65,21 +65,9 @@ Experimente a aplicação diretamente pelo navegador:
 
 Confira algumas capturas de tela da aplicação.
 
-![Loja de eBooks AW — tela 1](https://github.com/user-attachments/assets/02179800-6902-452d-87c5-36fd40122b0e)
-
-![Loja de eBooks AW — tela 2](https://github.com/user-attachments/assets/62adbe17-bbb7-43c1-bcd2-caaaaf12ae25)
-
-![Loja de eBooks AW — tela 3](https://github.com/user-attachments/assets/45e8acd8-3723-4cd8-a5c5-fed8da800a71)
-
-![Loja de eBooks AW — tela 4](https://github.com/user-attachments/assets/0ab029d4-77d1-4829-b729-ed6e36f80373)
-
-![Loja de eBooks AW — tela 5](https://github.com/user-attachments/assets/efa7b4b3-42de-4981-852d-024e9e685be0)
-
-![Loja de eBooks AW — tela 6](https://github.com/user-attachments/assets/4499cf89-038e-42fa-9db7-2560b33d7ece)
-
-![Loja de eBooks AW — tela 7](https://github.com/user-attachments/assets/21b1c4d0-0039-4693-8abb-d05e6947288b)
-
-![Loja de eBooks AW — tela 8](https://github.com/user-attachments/assets/8895804e-9fe3-4a8e-abe8-b8abf3376212)
+<img width="1354" height="756" alt="home-ebook" src="https://github.com/user-attachments/assets/dca43ba3-c6c8-45c5-91d1-0fc28a438270" />
+<img width="1358" height="763" alt="catalogo" src="https://github.com/user-attachments/assets/3430ae4c-f8e0-4db2-a4ef-d0c75bb1a308" />
+<img width="1349" height="676" alt="carrinho" src="https://github.com/user-attachments/assets/c04c2a75-976e-4505-8e65-5ecdeb1a417f" />
 
 ## 🎁 eBook gratuito
 
